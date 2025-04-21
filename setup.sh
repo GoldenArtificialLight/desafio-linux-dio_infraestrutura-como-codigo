@@ -1,49 +1,6 @@
 #!/bin/bash
 
-# Diretórios: /public /adm /ven /sec
-# Grupos: GRP_ADM GRP_VEN GRP_SEC
-# Usuários: Ver mapa
-#
-# 1. Deletar itens existentes:
-# 	1.1 Deletar diretórios
-# 	1.2 Deletar usuários
-# 	1.3 Deletar grupos
-#
-# 2. Criar grupos
-# 
-# 3. Criar usuários
-# 	3.1 Criar usuários com uma senha padrão que
-# 		deverá ser substituída no primeiro login
-# 	3.2 Adicioná-los aos grupos correspondentes
-# 
-# 4. Criar diretórios
-#	4.1 Alterar o grupo para o correspondente,
-#		mantendo o root como dono
-#	4.2 Adicionar permissões totais ao dono e
-#		ao grupo, mas remover os outros
-#	4.3 Adicionar permissão 777 ao diretório
-#		público
-#
-# 5. Exibir informações para checagem
-# 	5.1 Remover esta funcionalidade para que o
-# 		script seja menos verboso
-
 declare -a usuarios=( carlos maria joao debora sebastiana roberto josefina amanda rogerio )
-
-# Deleção
-# Excluindo diretórios
-rm -rf /publico /adm /ven /sec
-
-# Excluindo usuários
-for i in ${usuarios[@]}
-do
-	userdel -f -r $i
-done
-
-# Excluindo grupos
-groupdel GRP_ADM
-groupdel GRP_VEN
-groupdel GRP_SEC
 
 # Criação dos grupos
 groupadd GRP_ADM
