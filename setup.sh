@@ -32,12 +32,12 @@ declare -a usuarios=( carlos maria joao debora sebastiana roberto josefina amand
 
 # Deleção
 # Excluindo diretórios
-rm -rfi /publico /adm /ven /sec
+rm -rf /publico /adm /ven /sec
 
 # Excluindo usuários
 for i in ${usuarios[@]}
 do
-	userdel -f -m $i
+	userdel -f -r $i
 done
 
 # Excluindo grupos
@@ -84,7 +84,3 @@ chown root:GRP_SEC /sec
 chmod 770 /adm /ven /sec
 
 # Finalizado
-# REMOVER ESSAS LINHAS
-cat /etc/passwd
-cat /etc/group
-ls -l /
