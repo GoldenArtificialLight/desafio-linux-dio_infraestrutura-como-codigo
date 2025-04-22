@@ -7,7 +7,7 @@ Abaixo, estão algumas explicações adicionais sobre o que o script faz.
 ## 📋Detalhes da tarefa
 O arquivo que contém os scripts de criação é o setup.sh, enquanto que o cleanup.sh deleta os itens criados anteriormente.<br>
 Como utilizar: <code style="color: rgb(100,237,255);">./setup.sh </code> <br>
-Para melhor controle sobre as saídas emitidas pelo script, é recomendável adicionar o seguinte trecho ao final da linha: <code style="color: rgb(100,237,255);">[> /root/log.txt 2> /root/erros.txt]</code>, pois isso irá redirecionar os outputs para arquivos de log no diretório home do root. Os erros e a saída padrão são colocados em arquivos diferentes para facilitar a análise.
+Para melhor controle sobre as saídas emitidas pelo script, é recomendável adicionar o seguinte trecho ao final da linha: <code style="color: rgb(100,237,255);">> /root/log.txt 2> /root/erros.txt</code>, pois isso irá redirecionar os outputs para arquivos de log no diretório home do root. Os erros e a saída padrão são colocados em arquivos diferentes para facilitar a análise.
 
 Abaixo, está a relação de usuários e grupos:
 |Grupo|Usuários|Diretório|Descrição|
