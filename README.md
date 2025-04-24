@@ -19,4 +19,3 @@ Abaixo, está a relação de usuários e grupos:
 Cada diretório concede todas as permissões ao dono e aos membros do grupo correspondente, mas as bloqueia para outros usuários, seguindo o modo 770 (rwxrwx---). <br>
 Além destes, há também o diretório /publico, que pode ser acessado e utilizado por todos os usuários.
 
-Para conveniência, o script deleta tudo o que foi criado antes de executar novamente, para que os testes sejam mais rápidos.
